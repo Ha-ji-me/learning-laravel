@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/tests', [TestController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{postId}', [PostController::class, 'show']);
+// Route::get('/posts/{postId}/edit', [PostController::class, 'edit']);
